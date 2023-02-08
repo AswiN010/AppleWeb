@@ -1,0 +1,65 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Product Card UI Design</title>
+
+    
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="imgBx">
+            <img src="{{productdata.productImg}}" style="width: 100%;height: 100%;">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>{{productdata.productName}}<br>
+                    <span>{{productdata.vendor_name}}</span>
+
+                </h2>
+                <p>
+                     {{productdata.description}}
+                </p>
+               
+                    <h3>                    <span style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 40px;">Rs.{{productdata.price}}</span>
+                    </h3>
+                    <br>
+                    <br>
+
+                    &nbsp;
+                &nbsp;
+                <button style="margin-top: 30px;">Buy Now</button>
+                &nbsp;
+                &nbsp;
+                <button type="button" class="btn btn-danger"><a href="product/delete-product/{{productdata.id}}" style="text-decoration: none;color: white;">DELETE</a></button>
+                &nbsp;
+                &nbsp;
+                <button type="button" class="btn btn-danger"><a href="product/edit-product/{{productdata.id}}" style="text-decoration: none;color: white;">EDIT</a></button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Change The Picture and Associated Element Color when Color Options Are Clicked.
+        $(".product-colors span").click(function() {
+            $(".product-colors span").removeClass("active");
+            $(this).addClass("active");
+            $(".active").css("border-color", $(this).attr("data-color-sec"))
+            $("body").css("background", $(this).attr("data-color-primary"));
+            $(".content h2").css("color", $(this).attr("data-color-sec"));
+            $(".content h3").css("color", $(this).attr("data-color-sec"));
+            $(".container .imgBx").css("background", $(this).attr("data-color-sec"));
+            $(".container .details button").css("background", $(this).attr("data-color-sec"));
+            $(".imgBx img").attr('src', $(this).attr("data-pic"));
+        });
+    </script>
+
+</body>
+
+</html>

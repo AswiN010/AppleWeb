@@ -1,0 +1,39 @@
+<div>
+    <div class="header-blue" style="background-image: url(https://i.postimg.cc/gJd2s5D2/Screenshot-2023-01-25-124715.jpg);background-size: cover;height: 490px;">
+        <nav class="navbar navbar-light navbar-expand-md navigation-clean-search">
+            <div class="container-fluid"><a class="navbar-brand" href="">
+                <img src="https://i.postimg.cc/L6rYfxrn/imgbin.png" style="width: 50px;margin-left: 40px;margin-top: -15px;">
+            </a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-1">
+                   
+                    <ul class="nav navbar-nav" style="margin-left: 800px;">
+                        <li class="nav-item" style="font-size: 20px;" role="presentation"><a class="nav-link" href="product">STORE</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" style="font-size: 20px;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="product/add-product">ADD NEW</a></li>
+                                <li><hr class="dropdown-divider" /></li>
+                                <li><a class="dropdown-item" href="#!">CONTACTS</a></li>
+                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                            </ul>
+                        </li>                     
+                    </ul>
+                    <form class="form-inline mr-auto" target="_self">
+                        <div class="form-group"><label for="search-field">
+                            <i class="fa fa-search text-white">
+                            </i>
+                        </label>
+                        <input (keyup)="search($event)" id="s1" name="se1"  [(ngModel)]="searchterm"   type="text" class="form-control search-field text-white" >
+                        </div>
+                    </form></div>
+            </div>
+        </nav>
+       
+    </div>
+</div>
+
+
+<!-- <form class="form-inline mr-auto" target="_self">
+    <div class="form-group"><label for="search-field"><i class="fa fa-search text-white"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
+</form><span class="navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light action-button" role="button" href="#">Signup</a></div> -->
